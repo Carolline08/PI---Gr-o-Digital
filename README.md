@@ -61,7 +61,8 @@ O Grão Digital oferece uma plataforma digital que:
 
 🛠️ Status do projeto
 
-🚧 Projeto acadêmico em desenvolvimento (PI – Projeto Integrador).
+Projeto acadêmico em desenvolvimento (PI – Projeto Integrador).
+
 
 
 
