@@ -61,6 +61,9 @@ O Grão Digital oferece uma plataforma digital que:
 👨‍💻 Equipe de Desenvolvimento 
 
 Carolline Barbosa - https://github.com/Carolline08
+
 Jai Santos - https://github.com/azulejai
+
 Marcelly Arcanjo - https://github.com/arcmarcelly
+
 Maria Clara Moutinho - https://github.com/maricmoutinho
