@@ -1,77 +1,124 @@
-🌾 Grão Digital
+# GraoDigital - Sistema de Aquisição e Gestão de Sementes do IPA
 
-**Sobre o projeto**
+![Logo](https://via.placeholder.com/150x50?text=GraoDigital+Logo)
 
-O Grão Digital é uma plataforma desenvolvida para modernizar o Programa de Aquisição e Distribuição de Sementes do IPA. O projeto busca tornar os processos mais eficientes, transparentes e organizados, apoiando a gestão pública e fortalecendo o agricultor familiar.
+[![React](https://img.shields.io/badge/React-17.0.2-blue?logo=react)](https://reactjs.org/)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.0-brightgreen?logo=spring)](https://spring.io/projects/spring-boot)
+[![Java](https://img.shields.io/badge/Java-17-orange?logo=java)](https://www.java.com/)
+[![License](https://img.shields.io/badge/License-Academic-lightgrey)](#)
+
+---
+
+## Descrição do Projeto
+O **GraoDigital** é um sistema web **fullstack** desenvolvido para a **aquisição e gestão de sementes** do **Instituto Agronômico de Pernambuco (IPA)**.  
+
+O sistema permite:  
+- Cadastro e gerenciamento de agricultores;  
+- Gestão de sementes e tipos de culturas;  
+- Controle de transportes e entregas;  
+- Visualização de relatórios e status das operações;  
+
+O projeto foi desenvolvido com foco em **facilidade de uso**, **rastreabilidade** e **eficiência operacional**.
+
+---
+
+## Tecnologias Utilizadas
+
+**Frontend:**  
+- React.js  
+- JavaScript (ES6)  
+- HTML5 & CSS3  
+- React Router  
+- Axios  
+
+**Backend:**  
+- Java 17  
+- Spring Boot  
+- Spring Data JPA  
+- Hibernate ORM  
+- Banco de dados relacional (H2 ou configurável)  
+
+**Ferramentas Adicionais:**  
+- Postman  
+- Git/GitHub  
+
+---
+
+## Entidades Principais
+
+| Entidade     | Descrição                                                                 |
+|--------------|---------------------------------------------------------------------------|
+| Agricultor   | Representa agricultores. Campos: `id`, `nome`, `telefone`, `localEndereco`, `CPF`, `tipoCultura`, `usuarioId`. |
+| Semente      | Representa sementes gerenciadas. Campos: `id`, `nome`, `quantidade`, `tipoCultura`. |
+| Transporte   | Controla entregas de sementes. Campos: `id`, `nomeMotorista`, `dataHoraSaida`, `dataHoraChegada`, `agricultorId`. |
+| Usuário      | Representa usuários do sistema. Campos: `idUsuario`, `nome`, `login`, `senha`. |
+
+---
+
+## Estrutura do Projeto
+
+grao-digital/
+├── backend/ # API Spring Boot
+│ ├── src/main/java/
+│ │ ├── com/graodigital/grao_digital/controller/ # Controllers (AgricultorController, TransporteController, etc.)
+│ │ ├── com/graodigital/grao_digital/model/ # Entidades (Agricultor, Semente, Transporte, Usuario)
+│ │ ├── com/graodigital/grao_digital/repository/ # Repositórios JPA
+│ │ └── com/graodigital/grao_digital/GraoDigitalApplication.java
+│ └── src/main/resources/
+│ └── application.properties
+│
+├── frontend/ # Aplicação React
+│ ├── src/
+│ │ ├── components/ # Modais e componentes reutilizáveis (ModalAgricultor.jsx)
+│ │ ├── pages/ # Telas do sistema (TelaInicial.jsx, etc.)
+│ │ ├── api/ # Comunicação com backend (AgricultorApi.js)
+│ │ ├── styles/ # CSS do sistema
+│ │ └── assets/ # Imagens e logos
+│ └── package.json
+│
+└── README.md # Este arquivo
 
 
+- `TelaInicial.jsx` – Tela principal do sistema.  
+- `ModalAgricultor.jsx` – Modal para cadastro de agricultores.  
+- `AgricultorApi.js` – Comunicação frontend/backend via Axios.  
+- Controllers no backend gerenciam endpoints REST.  
+- Repositórios Spring Data JPA fazem persistência no banco.  
+
+---
+
+## Como Rodar o Projeto
+
+### Backend
+1. Abra o backend na IDE (Eclipse, IntelliJ, VS Code).  
+2. Configure o banco de dados em `application.properties`.  
+3. Rode a aplicação (`Spring Boot Run`) na porta **8081**.  
+
+### Frontend
+1. Entre na pasta `frontend/`.  
+2. Execute `npm install` para instalar dependências.  
+3. Execute `npm start` para iniciar o React na porta **3001**.  
+
+O sistema estará disponível em [http://localhost:3001](http://localhost:3001).
+
+---
+
+## Observações
+- O backend deve estar rodando na porta **8081**.  
+- Certifique-se de liberar **CORS** para permitir requisições do frontend (`http://localhost:3001`).  
+
+---
+
+## Licença
+Projeto acadêmico desenvolvido para fins de estudo e colaboração.  
+
+## Colaboradores
+O projeto foi desenvolvido por:  
+- **Marcelly Arcanjo**  
+- **Carolline Barbosa**  
+- **Jai Santos**  
+- **Maria Clara Moutinho**  
+
+---
 
 
-🎯 Objetivo
-
-Facilitar o controle e o acompanhamento da distribuição de sementes, reduzindo a burocracia administrativa, melhorando a logística e fornecendo dados confiáveis para planejamento, monitoramento e avaliação do programa.
-
-
-
- 🚨 Problema
- 
-Atualmente, o programa enfrenta:
-- Atrasos na distribuição das sementes  
-- Processos burocráticos e pouco padronizados  
-- Dificuldade no acompanhamento das entregas  
-- Limitações no controle e análise dos dados  
-- Pouco retorno sobre o impacto das ações no campo  
-
-Esses problemas afetam diretamente a produção e a renda do agricultor familiar.
-
-
-
-
- 💡 Solução
- 
-O Grão Digital oferece uma plataforma digital que:
-- Centraliza informações do processo de distribuição  
-- Permite acompanhar as etapas da entrega de sementes  
-- Organiza dados para controle e tomada de decisão  
-- Reduz falhas operacionais e retrabalho  
-- Apoia o planejamento e a gestão do programa  
-
-
-
-
- 👥 Público-alvo
- 
-- Agricultores familiares participantes do programa  
-- Técnicos responsáveis pela distribuição e acompanhamento  
-- Gestores públicos envolvidos na administração do IPA  
-
-
-
-
-🧭 Benefícios
-
-- Maior eficiência na distribuição  
-- Mais transparência nas etapas do processo  
-- Redução da burocracia  
-- Dados organizados para relatórios e planejamento  
-- Melhor apoio ao agricultor familiar  
-
-
-
-
-🛠️ Status do projeto
-
-Projeto acadêmico em desenvolvimento (PI – Projeto Integrador).
-
-
-
-
-👨‍💻 Equipe de Desenvolvimento 
-
-Carolline Barbosa - https://github.com/Carolline08
-
-Jai Santos - https://github.com/azulejai
-
-Marcelly Arcanjo - https://github.com/arcmarcelly
-
-Maria Clara Moutinho - https://github.com/maricmoutinho
