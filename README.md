@@ -55,28 +55,6 @@ O projeto foi desenvolvido com foco em **facilidade de uso**, **rastreabilidade*
 
 ## Estrutura do Projeto
 
-grao-digital/
-├── backend/ # API Spring Boot
-│ ├── src/main/java/
-│ │ ├── com/graodigital/grao_digital/controller/ # Controllers (AgricultorController, TransporteController, etc.)
-│ │ ├── com/graodigital/grao_digital/model/ # Entidades (Agricultor, Semente, Transporte, Usuario)
-│ │ ├── com/graodigital/grao_digital/repository/ # Repositórios JPA
-│ │ └── com/graodigital/grao_digital/GraoDigitalApplication.java
-│ └── src/main/resources/
-│ └── application.properties
-│
-├── frontend/ # Aplicação React
-│ ├── src/
-│ │ ├── components/ # Modais e componentes reutilizáveis (ModalAgricultor.jsx)
-│ │ ├── pages/ # Telas do sistema (TelaInicial.jsx, etc.)
-│ │ ├── api/ # Comunicação com backend (AgricultorApi.js)
-│ │ ├── styles/ # CSS do sistema
-│ │ └── assets/ # Imagens e logos
-│ └── package.json
-│
-└── README.md # Este arquivo
-
-
 - `TelaInicial.jsx` – Tela principal do sistema.  
 - `ModalAgricultor.jsx` – Modal para cadastro de agricultores.  
 - `AgricultorApi.js` – Comunicação frontend/backend via Axios.  
