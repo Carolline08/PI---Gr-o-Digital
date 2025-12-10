@@ -1,100 +1,70 @@
-# GrãoDigital - Sistema de Aquisição e Gestão de Sementes do IPA
+# Getting Started with Create React App
 
-[![React](https://img.shields.io/badge/React-17.0.2-blue?logo=react)](https://reactjs.org/)
-[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.0-brightgreen?logo=spring)](https://spring.io/projects/spring-boot)
-[![Java](https://img.shields.io/badge/Java-17-orange?logo=java)](https://www.java.com/)
-[![License](https://img.shields.io/badge/License-Academic-lightgrey)](#)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
----
+## Available Scripts
 
-## Descrição do Projeto
-O **GrãoDigital** é um sistema web **fullstack** desenvolvido para a **aquisição e gestão de sementes** do **Instituto Agronômico de Pernambuco (IPA)**.  
+In the project directory, you can run:
 
-O sistema permite:  
-- Cadastro e gerenciamento de agricultores;  
-- Gestão de sementes e tipos de culturas;  
-- Controle de transportes e entregas;  
-- Visualização de relatórios e status das operações;  
+### `npm start`
 
-O projeto foi desenvolvido com foco em **facilidade de uso**, **rastreabilidade** e **eficiência operacional**.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
----
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## Tecnologias Utilizadas
+### `npm test`
 
-**Frontend:**  
-- React.js  
-- JavaScript (ES6)  
-- HTML5 & CSS3  
-- React Router  
-- Axios  
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-**Backend:**  
-- Java 17  
-- Spring Boot  
-- Spring Data JPA  
-- Hibernate ORM  
-- Banco de dados relacional (H2 ou configurável)  
+### `npm run build`
 
-**Ferramentas Adicionais:**  
-- Postman  
-- Git/GitHub  
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
----
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## Entidades Principais
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-| Entidade     | Descrição                                                                 |
-|--------------|---------------------------------------------------------------------------|
-| Agricultor   | Representa agricultores. Campos: `id`, `nome`, `telefone`, `localEndereco`, `CPF`, `tipoCultura`, `usuarioId`. |
-| Semente      | Representa sementes gerenciadas. Campos: `id`, `nome`, `quantidade`, `tipoCultura`. |
-| Transporte   | Controla entregas de sementes. Campos: `id`, `nomeMotorista`, `dataHoraSaida`, `dataHoraChegada`, `agricultorId`. |
-| Usuário      | Representa usuários do sistema. Campos: `idUsuario`, `nome`, `login`, `senha`. |
+### `npm run eject`
 
----
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-## Estrutura do Projeto
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-- `TelaInicial.jsx` – Tela principal do sistema.  
-- `ModalAgricultor.jsx` – Modal para cadastro de agricultores.  
-- `AgricultorApi.js` – Comunicação frontend/backend via Axios.  
-- Controllers no backend gerenciam endpoints REST.  
-- Repositórios Spring Data JPA fazem persistência no banco.  
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
----
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Como Rodar o Projeto
+## Learn More
 
-### Backend
-1. Abra o backend na IDE (Eclipse, IntelliJ, VS Code).  
-2. Configure o banco de dados em `application.properties`.  
-3. Rode a aplicação (`Spring Boot Run`) na porta **8081**.  
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-### Frontend
-1. Entre na pasta `frontend/`.  
-2. Execute `npm install` para instalar dependências.  
-3. Execute `npm start` para iniciar o React na porta **3001**.  
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-O sistema estará disponível em [http://localhost:3001](http://localhost:3001).
+### Code Splitting
 
----
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-## Observações
-- O backend deve estar rodando na porta **8081**.  
-- Certifique-se de liberar **CORS** para permitir requisições do frontend (`http://localhost:3001`).  
+### Analyzing the Bundle Size
 
----
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-## Licença
-Projeto acadêmico desenvolvido para fins de estudo e colaboração.  
+### Making a Progressive Web App
 
-## Colaboradores
-O projeto foi desenvolvido por:  
-- **Marcelly Arcanjo**  
-- **Carolline Barbosa**  
-- **Jai Santos**  
-- **Maria Clara Moutinho**  
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
----
+### Advanced Configuration
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
